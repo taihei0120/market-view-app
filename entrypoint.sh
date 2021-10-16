@@ -1,5 +1,5 @@
-set -e
+# set -e
 
-rm -f /myapp/tmp/pids/server.pid
+# rm -f /myapp/tmp/pids/server.pid
 
-exec "$@"
+# exec "$@"

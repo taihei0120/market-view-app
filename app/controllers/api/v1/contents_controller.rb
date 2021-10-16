@@ -16,7 +16,6 @@ module Api
           config.consumer_key    = ENV["API_KEY_TW"]
           config.consumer_secret = ENV["API_KEY_TW_SECRET"]
         end
-
         tweets = client.search("from:elerianm OR from:PIMCO OR from:nntaleb", count: 10, result_type: "recent", exclude: "retweets").take(12).collect do |tweet|
           {
             "id": "#{tweet.id}",
@@ -27,10 +26,8 @@ module Api
           }
         end
 
-
         ## ChartAPI
         exchange_timeseries = Alphavantage::Exchange_Timeseries.new from: "USD", to: "JPY", key: ENV["API_KEY_ALPHA"], type: "daily", outputsize: "full"
-        # "87X7ZI73MMVHI3HL"
 
         fx_open = exchange_timeseries.open("asc") #始値
         fx_close = exchange_timeseries.close("asc") #終値
@@ -43,8 +40,8 @@ module Api
         fx_price_high = fx_high.transpose[1] #高値
         fx_price_low = fx_low.transpose[1] #安値
 
+        # render json: { "tweets" => tweets }
         render json: { "tweets" => tweets, "contents" => contents, "fxTime" => fx_time, "fxPriceOpen" => fx_price_open, "fxPriceClose" => fx_price_close, "fxPriceHigh" => fx_price_high, "fxPriceLow" => fx_price_low }
-        # binding.pry
         # "fxTime" => fx_time, "fxPriceOpen" => fx_price_open, "fxPriceClose" => fx_price_close, "fxPriceHigh" => fx_price_high, "fxPriceLow" => fx_price_low,
         # "tweets" => tweets, "contents" => contents }
       end

@@ -4,8 +4,10 @@ module Api
       require 'twitter'
       def index
         client = Twitter::REST::Client.new do |config|
-          config.consumer_key    = ENV["API_KEY_TW"]
-          config.consumer_secret = ENV["API_KEY_TW_SECRET"]
+          # config.consumer_key    = ENV["API_KEY_TW"]
+          # config.consumer_secret = ENV["API_KEY_TW_SECRET"]
+          config.consumer_key    = "04ctqlivqIjNGRP8awg1vBogT"
+          config.consumer_secret = "cigo6abMyYT9lYH2ZGeIKr5pBWWNS1MRXQZbEwGYkRlwFSz9Zy"
         end
 
         keyword = params["0"]
