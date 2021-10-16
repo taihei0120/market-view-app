@@ -12,7 +12,7 @@ export const GridLayout = memo((props) => {
   const contents = allData?.contents;
   const tweets = allData?.tweets;
 
-  if (contents === undefined) {
+  if (tweets === undefined) {
     return (<div></div>)
   } else {
     return (
