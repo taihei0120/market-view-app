@@ -36,6 +36,7 @@ FXチャート: 1分あたり5回まで、1日あたり500回まで
 ruby 2.6.5  
 Rails 6.0.4  
 React 17.0.2
+Docker 20.10.8
 
 # Railsにて使用した主要なGem  
 alphavantagerb: API（FXチャートの情報源）にリクエストを送るため  

@@ -31,7 +31,7 @@ module PrototypeOriginalApp
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost:3000' , 'http://localhost:3001' , 'http://localhost:3002' , 'http://localhost:8000'
+        origins ENV["CORS_Origin_Local"]
         resource '*'
       end
     end
