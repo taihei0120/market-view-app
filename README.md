@@ -37,6 +37,7 @@ ruby 2.6.5
 Rails 6.0.4  
 React 17.0.2
 Docker 20.10.8
+Docker Compose 2.0.0
 
 # Railsにて使用した主要なGem  
 alphavantagerb: API（FXチャートの情報源）にリクエストを送るため  
