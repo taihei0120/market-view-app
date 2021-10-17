@@ -31,8 +31,9 @@ module PrototypeOriginalApp
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins ENV["CORS_Origin_Local"]
+        origins ENV["CORS_Origin_Local"] ,ENV["CORS_Origin_AWS"]
         resource '*'
+        credentials: true
       end
     end
 
