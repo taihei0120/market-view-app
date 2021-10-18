@@ -21,13 +21,13 @@ export const GridLayout = memo((props) => {
         <Wrap mt="3" spacing="15px" align="center" justify="center">
           <WrapItem>
             <Box w="480px" h="800px" bg="gray.200" align="center" justify="center" pt={1} borderRadius="10px" shadow="md" border="gray solid 3px">
-              {/* <ChartTopPage fxTime={fxTime} fxPriceOpen={fxPriceOpen} /> */}
+              <ChartTopPage fxTime={fxTime} fxPriceOpen={fxPriceOpen} />
             </Box>
           </WrapItem>
 
           <WrapItem>
             <Box w="480px" h="800px" bg="gray.200" align="center" justify="center" p={1} borderRadius="10px" shadow="md" border="gray solid 3px">
-              {/* < NewsTopPage contents={contents} /> */}
+              < NewsTopPage contents={contents} />
             </Box>
           </WrapItem>
 
