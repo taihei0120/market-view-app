@@ -33,7 +33,7 @@ module PrototypeOriginalApp
       allow do
         origins ENV["CORS_Origin_Local"] ,ENV["CORS_Origin_AWS"]
         resource '*'
-        credentials: true
+        # credentials: true
       end
     end
 

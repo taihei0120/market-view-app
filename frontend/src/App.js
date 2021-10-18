@@ -13,6 +13,7 @@ export default function App() {
 
   useEffect(() => {
     setLoading(true);
+    // axios.get("http://localhost:3000/api/v1/contents")
     axios.get("http://35.76.43.68:3000/api/v1/contents")
       .then((res) => {
         console.log("rails API レスポンス済");

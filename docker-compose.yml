@@ -1,23 +1,10 @@
 version: '3'
 
 services:
-    db:
-        platform: linux/x86_64
-        image: mysql:5.6
-        environment:
-            MYSQL_DATABASE: root
-            MYSQL_ROOT_PASSWORD:
-            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-        ports:
-            - "3306:3306"
-
     web:
         build: 
             context: .
             dockerfile: Dockerfile_back
-        # environment:
-        #     - 'API_KEY_TW = 04ctqlivqIjNGRP8awg1vBogT'
-        #     - 'API_KEY_TW_SECRET = cigo6abMyYT9lYH2ZGeIKr5pBWWNS1MRXQZbEwGYkRlwFSz9Zy'
         env_file: development.env
         command: /bin/sh -c "rm -f /myapp/tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
         volumes:

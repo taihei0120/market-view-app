@@ -1,17 +1,21 @@
 # アプリケーション概要
 金融情報のキュレーションアプリ。  
 FXチャート、ニュース、ツイートの3つの情報を表示。いずれの情報もWeb APIから取得。  
-フロントエンドをReactで、サーバーサイドはRails（APIモード）で実装。
+（DBは存在せず、全ての情報は外部のWeb APIからその都度取得）  
+フロントエンドをReactで、サーバーサイドはRails（APIモード）で実装。  
+
+# アプリケーション・イメージ
+[![Image from Gyazo](https://i.gyazo.com/3788b965efa8246a6bbe4484f261aced.png)](https://gyazo.com/3788b965efa8246a6bbe4484f261aced)
 
 # 使用したAPI
 FXチャート: Alpha Vantage API  
 ニュース: NEWS API  
-ツイート: Twitter API（公式）  
+ツイート: Twitter API  
   
-※注意：いずれのAPIも無料枠のためAPIコールに制限あり。  
-FXチャート: 1分あたり5回まで、1日あたり500回まで  
-ニュース: 1日あたり100回まで  
-ツイート: 15分あたり180回まで  
+※注意点：いずれのAPIも無料枠のためAPIコールに制限あり。  
+FXチャート: 1分あたり5回まで、1日あたり500回まで。  
+ニュース: 1日あたり100回まで。  
+ツイート: 15分あたり180回まで。  
 
 # ページ構成
 ページ数は2ページ  
@@ -29,7 +33,8 @@ FXチャート: 1分あたり5回まで、1日あたり500回まで
 # 実装機能（Dashboard における）
 ・自動スクロール機能  
 [![Image from Gyazo](https://i.gyazo.com/5164796a6f62b853f2abd4419ecb07eb.gif)](https://gyazo.com/5164796a6f62b853f2abd4419ecb07eb)  
-・検索機能（外部APIにHTTPリクエストを送る）  
+  
+・検索機能  
 <a href="https://gyazo.com/38b585700ce62b112ef82017035d69c7"><img src="https://i.gyazo.com/38b585700ce62b112ef82017035d69c7.gif" alt="Image from Gyazo" width="1000"/></a>  
 
 # バージョン情報  
@@ -46,6 +51,6 @@ twitter: API（ツイートの情報源）にリクエストを送るため
 
 # Reactにて使用した主要なライブラリ  
 chakra-ui: UI/UXツール  
-axios: Rails APIとのやりとりのため  
+axios: ReactからRailsにリクエストを送るため  
 lightweight-charts: FXチャート作図  
 react-twitter-embed: ツイートをtwitter社の規約通りに表現するため
