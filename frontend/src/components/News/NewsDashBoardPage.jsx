@@ -40,18 +40,17 @@ export const NewsDashBoardPage = memo((props) => {
           <Input focusBorderColor="blue.300" _style={{ color: "black" }} type="text" size="sm" mb={10} w={300} placeholder="please enter a search word" value={inputValue} onChange={searchWord} />
           <Button size="sm" ml={3} bg="gray.700" _style={{ outline: "none" }} _hover={{ bg: "blue.200" }} onClick={onClickSearch}>Search</Button>
         </Flex>
-
       </Flex>
-      <Wrap p={{ base: 3, md: 5 }} justifyContent="center">
+      <Wrap p={{ base: 3, md: 4 }} justifyContent="center">
         <NewsDashBoardSearchResult isOpen={isOpen} newsDataGet={newsDataGet} loading={loading} />
         {newsDataAll.map((value) => (
           <WrapItem key={value.content}>
-            <Box w="480px" h="350px" bg="white" borderRadius="10px" shadow="md" m={1} p={3} _hover={{ cursor: "pointer", opacity: 0.8 }}
+            <Box w="440px" h="350px" bg="white" borderRadius="10px" shadow="md" m={1} p={3} _hover={{ cursor: "pointer", opacity: 0.8 }}
               onClick={() => {
                 openWebSite(value.url);
                 setSelectNews();
               }}>
-              <Scrollbars style={{ width: 460, height: 330 }}>
+              <Scrollbars style={{ width: 430, height: 330 }}>
                 <Stack textAlign="center">
                   <Text color="black" fontSize="lg" fontWeight="bold">
                     {value.title}

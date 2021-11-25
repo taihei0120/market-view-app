@@ -38,7 +38,7 @@ export const TwitterDashBoardPage = memo((props) => {
         <TwitterDashBoardSearchResult twitterDataGet={twitterDataGet} isOpen={isOpen} />
         {tweetsAllData?.map((value) => (
           <WrapItem key={value.id}>
-            <Box w="480px" h="550px" bg="white" borderRadius="10px" shadow="md" m={1} p={3} _hover={{ cursor: "pointer", opacity: 0.8 }}>
+            <Box w="440px" h="550px" bg="white" borderRadius="10px" shadow="md" m={1} p={3} _hover={{ cursor: "pointer", opacity: 0.8 }}>
               <Scrollbars>
                 <TwitterTweetEmbed tweetId={value.id} placeholder={<Center h="300px"><Loading /></Center>} />
               </Scrollbars>
